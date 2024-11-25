@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.3 on linux)" generated="2024-11-26T06:18:48.279148" rpa="false" schemaversion="5">
+<suite id="s1" name="01 LandingPage" source="/media/fariz/DiskD/1. Github/E2E-Mediverse/tests/01_LandingPage.robot">
+<test id="s1-t1" name="Open Mediverse" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-26T06:18:48.395400" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<arg>https://mediverse.id/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-26T06:18:48.395136" elapsed="1.656089"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-26T06:18:50.051666" elapsed="0.090242"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-11-26T06:18:55.739492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-26T06:18:55.739701" level="FAIL">Element 'xpath=//svg[@width="64" and @height="63"]' not visible after 5 seconds.</msg>
+<arg>xpath=//svg[@width="64" and @height="63"]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-11-26T06:18:50.142324" elapsed="5.598370">Element 'xpath=//svg[@width="64" and @height="63"]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//svg[@width="64" and @height="63"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T06:18:55.741010" elapsed="0.000060"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>Produk</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T06:18:55.741353" elapsed="0.000075"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-11-26T06:18:55.741658" elapsed="0.000044"/>
+</kw>
+<status status="FAIL" start="2024-11-26T06:18:48.394286" elapsed="7.347719">Element 'xpath=//svg[@width="64" and @height="63"]' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" start="2024-11-26T06:18:48.280058" elapsed="7.462664"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="01 LandingPage">01 LandingPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
