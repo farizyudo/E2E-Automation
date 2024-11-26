@@ -4,38 +4,47 @@ Library           SeleniumLibrary
 *** Variables ***
 ${BROWSER}        chrome
 ${URL}            https://mediverse.id/
+${BUTTON_DOWNLOAD}    xpath://a[contains(@class, 'hover:text-[#5200FF]')]//span[text()='Download App']
+
 *** Test Cases ***
 Open Mediverse
-    Open Browser                     ${URL}                                               ${BROWSER}
-    # Maximize Browser Window        
-    # Wait Until Element Is Visible        xpath=//svg[@width="64" and @height="63"]            timeout=5
-    # Click Element                        xpath=//svg[@width="64" and @height="63"]
-    # Click Link                           Produk
-    Close Browser
-
-Open Home
-    Open Browser                     https://mediverse.id/#home-slider    ${BROWSER}                               
-    Close Browser
+    Open Browser                     ${URL}                     ${BROWSER}         # Membuka browser
+    Wait Until Element Is Visible    ${BUTTON_DOWNLOAD}         10s                # Menunggu hingga elemen tombol terlihat di halaman dengan batas waktu 10 detik.
+    # Scroll Element Into View         ${BUTTON_DOWNLOAD}
+    Click Element                    ${BUTTON_DOWNLOAD}                            # Mengklik tombol "Download App". 
+    Sleep                            3s                                            # Menunggu selama 3 detik (bisa disesuaikan).
+    # Capture Page Screenshot                                                        # Mengambil screenshot halaman setelah mengklik tombol.
+    Close Browser                                                                  # Menutup browser.
     
-Open Product
-    Open Browser                     https://mediverse.id/#our-product    ${BROWSER}                               
-    Close Browser
+# Open Product
+#     Open Browser                     https://mediverse.id/#our-product                    ${BROWSER}                               
+#     Maximize Browser Window        
+    
+#     Close Browser
 
-Open Mitra
-    Open Browser                     https://mediverse.id/#partnership    ${BROWSER}                               
-    Close Browser
+# Open Mitra
+#     Open Browser                     https://mediverse.id/#partnership                    ${BROWSER}                               
+#     Maximize Browser Window        
+    
+#     Close Browser
 
-Open Blog
-    Open Browser                     https://mediverse.id/#news    ${BROWSER}                               
-    Close Browser
+# Open Blog
+#     Open Browser                     https://mediverse.id/#news                            ${BROWSER}                               
+#     Maximize Browser Window        
+    
+#     Close Browser
 
-Open Promo
-    Open Browser                     https://mediverse.id/#promotion    ${BROWSER}                               
-    Close Browser
+# Open Promo
+#     Open Browser                     https://mediverse.id/#promotion                        ${BROWSER}                               
+#     Maximize Browser Window        
+    
+#     Close Browser
 
-Open Tentang Kami
-    Open Browser                     https://mediverse.id/#about-us    ${BROWSER}                               
-    Close Browser
+# Open Tentang Kami
+#     Open Browser                     https://mediverse.id/#about-us                        ${BROWSER}
+#     Maximize Browser Window        
+    
+#     Close Browser
     
     
 
