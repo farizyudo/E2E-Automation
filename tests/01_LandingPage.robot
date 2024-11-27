@@ -2,64 +2,130 @@
 Library           SeleniumLibrary
 
 *** Variables ***
+# General
+${URL}                        https://mediverse.id/ 
 ${BROWSER}                    chrome
-${URL}                        https://mediverse.id/
-# ${BUTTON_DOWNLOAD}          xpath://a[contains(@class, 'hover:text-[#5200FF]')]//span[text()='Download App']
-${BUTTON_DOWNLOAD}            xpath://button[contains(@class, 'Button_button__primary__oL151')]
-# ${DIV_LOCATOR_MADEVO}       xpath://div[contains(@class, 'w-[158px]') and contains(@class, 'bg-[#FAF9FF]')]
-${DIV_LOCATOR_MADEVO}         xpath://div[contains(@class, 'bg-') and contains(@class, 'FAF9FF')]
-${EXPECTED_TITLE_MADEVO}      Medevo
-${EXPECTED_TEXT_MADEVO}       Layanan akses cepat ke dokter, kapan saja, di mana saja, melalui ponsel Anda.
+${CLOSE_POPUP}                //div[@id="portal"]/div/div/div
+${CLOSE_MITRA}                //div[@id='portal']/div/div/div
 
+# Home
+${BUTTON_DOWNLOAD}            //button[.//span[text()='Download App']]
+${BUTTON_GABUNG_MITRA}        //button[text()='Gabung Mitra']
+
+# Produk
+${PRODUK}                     //a[text()='Produk']
+${CLICK_Madevo}               //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medevo']]
+${CLICK_Medpharm}             //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpharm']]
+${CLICK_Medpoint}             //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpoint']]
+${CLICK_EHR}                  //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='EHR']]
+${VALIDASI_Madevo}            //div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='MEDEVO']]
+${VALIDASI_Medpharm}          //div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='MEDPHARM']]
+${VALIDASI_Medpoint}          //div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='MEDPOINT']]
+${VALIDASI_EHR}               //div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='EHR']]
+
+# Mitra
+${MITRA}                      //a[text()='Mitra']
+${BUTTON_MITRA}               //button[text()='Mendaftar Kemitraan']
+
+# Blog
+${BLOG}                       //a[text()='Blog']
+
+# Promo
+${PROMO}                       //a[text()='Promo']
+
+# Tentang Kami
+${ABOUT}                       //a[text()='Tentang Kami']
+${BUTTON_KONTAK_KAMI}          //button[text()='Kontak Kami']
 
 *** Test Cases ***
 Open Mediverse
-    Open Browser                     ${URL}                     ${BROWSER}         # Membuka browser
-    Maximize Browser Window          
-    Wait Until Element Is Visible    ${BUTTON_DOWNLOAD}         10s                # Menunggu hingga elemen tombol terlihat di halaman dengan batas waktu 10 detik.
-    # Scroll Element Into View       ${BUTTON_DOWNLOAD}                          
-    Click Element                    ${BUTTON_DOWNLOAD}                            # Mengklik tombol "Download App". 
-    Sleep                            2s                                            # Menunggu selama 3 detik (bisa disesuaikan).
-    # Capture Page Screenshot                                                        # Mengambil screenshot halaman setelah mengklik tombol.
-    Close Browser                                                                  # Menutup browser.
+    Open Browser                     ${URL}                         ${BROWSER}         
+    Maximize Browser Window         
+    Wait Until Element Is Visible    ${CLOSE_POPUP}                  5s
+    Click Element                    ${CLOSE_POPUP} 
+
+    Wait Until Element Is Visible    ${BUTTON_GABUNG_MITRA}
+    Click Element                    ${BUTTON_GABUNG_MITRA}
+    Click Element                    ${CLOSE_MITRA}        
+
+    Wait Until Element Is Visible    ${BUTTON_DOWNLOAD}             5s             
+    Click Element                    ${BUTTON_DOWNLOAD}                            
+    Close Browser                                                                  
     
 Open Product
-    Open Browser                     https://mediverse.id/#our-product                ${BROWSER}                               
+    Open Browser                         ${URL}                ${BROWSER}                               
     Maximize Browser Window          
-    Wait Until Element Is Visible    ${DIV_LOCATOR_MADEVO}                            10s
-    ${title_madevo}=                 Get Text                                         xpath:${DIV_LOCATOR_MADEVO}//h1
-    Should Be Equal                  ${title_madevo}                                  ${EXPECTED_TITLE_MADEVO}
-    ${description_madevo}=           Get Text                                         xpath:${DIV_LOCATOR_MADEVO}//p
-    Should Be Equal                  ${description_madevo}                            ${EXPECTED_TEXT_MADEVO}
+    Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
+    Click Element                        ${CLOSE_POPUP} 
+    Click Element                        ${PRODUK}
 
+# Validasi Elemen
+    # Madevo
+    Scroll Element Into View             ${CLICK_Madevo}                            # Scroll
+    Click Element                        ${CLICK_Madevo}
+    Scroll Element Into View             ${VALIDASI_Madevo}
+    Wait Until Element Is Visible        ${VALIDASI_Madevo}      5s
+    Element Should Be Visible            ${VALIDASI_Madevo}    
+    
+    # Medpharm
+    Scroll Element Into View             ${CLICK_Medpharm}                            # Scroll
+    Click Element                        ${CLICK_Medpharm}
+    Scroll Element Into View             ${VALIDASI_Medpharm}
+    Wait Until Element Is Visible        ${VALIDASI_Medpharm}     5s
+    Element Should Be Visible            ${VALIDASI_Medpharm}    
+    
+    # Medpoint
+    Scroll Element Into View             ${CLICK_Medpoint}                            # Scroll
+    Click Element                        ${CLICK_Medpoint}
+    Scroll Element Into View             ${VALIDASI_Medpoint}
+    Wait Until Element Is Visible        ${VALIDASI_Medpoint}     5s
+    Element Should Be Visible            ${VALIDASI_Medpoint}    
+    
+    # EHR
+    Scroll Element Into View             ${CLICK_EHR}                            # Scroll
+    Click Element                        ${CLICK_EHR}
+    Scroll Element Into View             ${VALIDASI_EHR}
+    Wait Until Element Is Visible        ${VALIDASI_EHR}           5s
+    Element Should Be Visible            ${VALIDASI_EHR}    
     Close Browser
 
 Open Mitra
-    Open Browser                     https://mediverse.id/#partnership                    ${BROWSER}                               
-    Maximize Browser Window        
-    
+    Open Browser                         ${URL}                ${BROWSER}                               
+    Maximize Browser Window          
+    Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
+    Click Element                        ${CLOSE_POPUP} 
+    Click Element                        ${MITRA}
+    # Wait Until Element Is Visible        ${BUTTON_MITRA}      5s
+    Scroll Element Into View             ${BUTTON_MITRA}
+    Click Element                        ${BUTTON_MITRA}
+    Sleep    5s
     Close Browser
 
 Open Blog
-    Open Browser                     https://mediverse.id/#news                            ${BROWSER}                               
-    Maximize Browser Window        
-    
+    Open Browser                         ${URL}                ${BROWSER}                               
+    Maximize Browser Window          
+    Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
+    Click Element                        ${CLOSE_POPUP} 
+    Click Element                        ${BLOG}
+
     Close Browser
 
 Open Promo
-    Open Browser                     https://mediverse.id/#promotion                        ${BROWSER}                               
-    Maximize Browser Window        
-    
+    Open Browser                         ${URL}                ${BROWSER}                               
+    Maximize Browser Window          
+    Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
+    Click Element                        ${CLOSE_POPUP} 
+    Click Element                        ${PROMO}
+
     Close Browser
 
 Open Tentang Kami
-    Open Browser                     https://mediverse.id/#about-us                        ${BROWSER}
-    Maximize Browser Window        
-    
-    Close Browser
-    
-    
+    Open Browser                         ${URL}                ${BROWSER}                               
+    Maximize Browser Window          
+    Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
+    Click Element                        ${CLOSE_POPUP} 
+    Click Element                        ${ABOUT}
 
-    
+    Close Browser    
     
 *** Keywords ***
