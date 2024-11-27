@@ -95,9 +95,9 @@ Open Mitra
     Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
     Click Element                        ${CLOSE_POPUP} 
     Click Element                        ${MITRA}
-    # Wait Until Element Is Visible        ${BUTTON_MITRA}      5s
     Scroll Element Into View             ${BUTTON_MITRA}
     Click Element                        ${BUTTON_MITRA}
+    Click Element                        ${CLOSE_MITRA}        
     Sleep    5s
     Close Browser
 
@@ -125,6 +125,9 @@ Open Tentang Kami
     Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
     Click Element                        ${CLOSE_POPUP} 
     Click Element                        ${ABOUT}
+    Wait Until Element Is Visible        ${BUTTON_KONTAK_KAMI}
+    Click Element                        ${BUTTON_KONTAK_KAMI}
+    Click Element                        ${CLOSE_MITRA} 
 
     Close Browser    
     
