@@ -1,398 +1,529 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.3 on linux)" generated="2024-11-28T03:02:58.576943" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.3 on linux)" generated="2024-11-28T06:08:57.289564" rpa="false" schemaversion="5">
 <suite id="s1" name="01 LandingPage" source="/media/fariz/DiskD/1. Github/E2E-Mediverse/tests/01_LandingPage.robot">
 <test id="s1-t1" name="Open Mediverse" line="41">
+<kw name="Open Landing Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:02:58.693746" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<msg time="2024-11-28T06:08:57.419953" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-28T03:02:58.693446" elapsed="1.347475"/>
+<status status="PASS" start="2024-11-28T06:08:57.419714" elapsed="2.630919"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.042362" elapsed="0.086897"/>
+<status status="PASS" start="2024-11-28T06:09:00.050978" elapsed="0.089589"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:08:57.418963" elapsed="2.721939"/>
+</kw>
+<kw name="Close Popup">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CLOSE_POPUP}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.129811" elapsed="0.161494"/>
+<status status="PASS" start="2024-11-28T06:09:00.143306" elapsed="0.228651"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:00.292020" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:00.372702" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
 <arg>${CLOSE_POPUP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.291665" elapsed="0.087619"/>
+<status status="PASS" start="2024-11-28T06:09:00.372284" elapsed="0.169968"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:00.142183" elapsed="0.400313"/>
+</kw>
+<kw name="Gaabung Mitra">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BUTTON_GABUNG_MITRA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.379593" elapsed="0.024636"/>
+<status status="PASS" start="2024-11-28T06:09:00.543395" elapsed="0.033701"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:00.405198" level="INFO">Clicking element '//button[text()='Gabung Mitra']'.</msg>
+<msg time="2024-11-28T06:09:00.577832" level="INFO">Clicking element '//button[text()='Gabung Mitra']'.</msg>
 <arg>${BUTTON_GABUNG_MITRA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.404672" elapsed="0.079250"/>
+<status status="PASS" start="2024-11-28T06:09:00.577386" elapsed="0.100021"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:00.484638" level="INFO">Clicking element '//div[@id='portal']/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:00.678078" level="INFO">Clicking element '//div[@id='portal']/div/div/div'.</msg>
 <arg>${CLOSE_MITRA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.484214" elapsed="0.084244"/>
+<status status="PASS" start="2024-11-28T06:09:00.677708" elapsed="0.160069"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:00.542862" elapsed="0.295106"/>
+</kw>
+<kw name="Button Download">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BUTTON_DOWNLOAD}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.568767" elapsed="0.018645"/>
+<status status="PASS" start="2024-11-28T06:09:00.838830" elapsed="0.023358"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:00.587861" level="INFO">Clicking element '//button[.//span[text()='Download App']]'.</msg>
+<msg time="2024-11-28T06:09:00.862732" level="INFO">Clicking element '//button[.//span[text()='Download App']]'.</msg>
 <arg>${BUTTON_DOWNLOAD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.587639" elapsed="0.056510"/>
+<status status="PASS" start="2024-11-28T06:09:00.862419" elapsed="0.110119"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:00.838311" elapsed="0.134553"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.644618" elapsed="0.118073"/>
+<status status="PASS" start="2024-11-28T06:09:00.974351" elapsed="0.153183"/>
 </kw>
-<status status="PASS" start="2024-11-28T03:02:58.692548" elapsed="2.070514"/>
+<status status="PASS" start="2024-11-28T06:08:57.418208" elapsed="3.710392"/>
 </test>
-<test id="s1-t2" name="Open Product" line="55">
+<test id="s1-t2" name="Open Product" line="51">
+<kw name="Open Landing Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:00.764647" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<msg time="2024-11-28T06:09:01.131048" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-28T03:03:00.764264" elapsed="1.076289"/>
+<status status="PASS" start="2024-11-28T06:09:01.130501" elapsed="1.277939"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-28T03:03:01.840823" elapsed="0.100361"/>
+<status status="PASS" start="2024-11-28T06:09:02.408993" elapsed="0.248855"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:01.129571" elapsed="1.530929"/>
+</kw>
+<kw name="Close Popup">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CLOSE_POPUP}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:01.941495" elapsed="0.065362"/>
+<status status="PASS" start="2024-11-28T06:09:02.661952" elapsed="0.155851"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:02.007768" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:02.818642" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
 <arg>${CLOSE_POPUP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.007260" elapsed="0.112722"/>
+<status status="PASS" start="2024-11-28T06:09:02.818108" elapsed="0.141629"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:02.661066" elapsed="0.299012"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:02.120541" level="INFO">Clicking element '//a[text()='Produk']'.</msg>
+<msg time="2024-11-28T06:09:02.961287" level="INFO">Clicking element '//a[text()='Produk']'.</msg>
 <arg>${PRODUK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.120256" elapsed="0.168095"/>
+<status status="PASS" start="2024-11-28T06:09:02.960669" elapsed="0.148740"/>
 </kw>
+<kw name="Validasi Madevo">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${CLICK_Madevo}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.288649" elapsed="0.291243"/>
+<status status="PASS" start="2024-11-28T06:09:03.110882" elapsed="0.296266"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:02.580468" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medevo']]'.</msg>
+<msg time="2024-11-28T06:09:03.408157" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medevo']]'.</msg>
 <arg>${CLICK_Madevo}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.580186" elapsed="0.062796"/>
+<status status="PASS" start="2024-11-28T06:09:03.407615" elapsed="0.083277"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${VALIDASI_Madevo}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.643178" elapsed="0.266140"/>
+<status status="PASS" start="2024-11-28T06:09:03.491142" elapsed="0.289203"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${VALIDASI_Madevo}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.909816" elapsed="0.027699"/>
+<status status="PASS" start="2024-11-28T06:09:03.780656" elapsed="0.024885"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:02.959118" level="INFO">Element '//div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='MEDEVO']]' is displayed.</msg>
+<msg time="2024-11-28T06:09:03.824490" level="INFO">Element '//h1[contains(text(), 'Konsultasi Dokter Online')]' is displayed.</msg>
 <arg>${VALIDASI_Madevo}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.938012" elapsed="0.021264"/>
+<status status="PASS" start="2024-11-28T06:09:03.805819" elapsed="0.018821"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:03.110046" elapsed="0.714749"/>
+</kw>
+<kw name="Validasi Medpharm">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${CLICK_Medpharm}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:02.959735" elapsed="0.313815"/>
+<status status="PASS" start="2024-11-28T06:09:03.825695" elapsed="0.294664"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:03.274338" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpharm']]'.</msg>
+<msg time="2024-11-28T06:09:04.121435" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpharm']]'.</msg>
 <arg>${CLICK_Medpharm}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:03.273958" elapsed="0.090624"/>
+<status status="PASS" start="2024-11-28T06:09:04.120819" elapsed="0.136599"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${VALIDASI_Medpharm}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:03.364836" elapsed="0.285203"/>
+<status status="PASS" start="2024-11-28T06:09:04.257681" elapsed="0.290405"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${VALIDASI_Medpharm}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:03.650579" elapsed="0.025318"/>
+<status status="PASS" start="2024-11-28T06:09:04.548397" elapsed="0.025618"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:03.696451" level="INFO">Element '//div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='MEDPHARM']]' is displayed.</msg>
+<msg time="2024-11-28T06:09:04.596239" level="INFO">Element '//h1[contains(text(), 'Beli Obat di')]' is displayed.</msg>
 <arg>${VALIDASI_Medpharm}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:03.676326" elapsed="0.020304"/>
+<status status="PASS" start="2024-11-28T06:09:04.574333" elapsed="0.022220"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:03.825246" elapsed="0.771568"/>
+</kw>
+<kw name="Validasi Medpoint">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${CLICK_Medpoint}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:03.697039" elapsed="0.286662"/>
+<status status="PASS" start="2024-11-28T06:09:04.597846" elapsed="0.300751"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:03.985371" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpoint']]'.</msg>
+<msg time="2024-11-28T06:09:04.899362" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpoint']]'.</msg>
 <arg>${CLICK_Medpoint}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:03.984739" elapsed="0.087191"/>
+<status status="PASS" start="2024-11-28T06:09:04.898925" elapsed="0.210896"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${VALIDASI_Medpoint}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.072296" elapsed="0.279231"/>
+<status status="PASS" start="2024-11-28T06:09:05.110104" elapsed="0.306552"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${VALIDASI_Medpoint}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.351912" elapsed="0.011951"/>
+<status status="PASS" start="2024-11-28T06:09:05.416939" elapsed="0.027805"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:04.376562" level="INFO">Element '//div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='MEDPOINT']]' is displayed.</msg>
+<msg time="2024-11-28T06:09:05.466958" level="INFO">Element '//h1[contains(text(), 'Buat Janji Konsultasi di')]' is displayed.</msg>
 <arg>${VALIDASI_Medpoint}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.364190" elapsed="0.012467"/>
+<status status="PASS" start="2024-11-28T06:09:05.445190" elapsed="0.021918"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:04.597250" elapsed="0.870017"/>
+</kw>
+<kw name="Validai EHR">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${CLICK_EHR}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.376841" elapsed="0.274611"/>
+<status status="PASS" start="2024-11-28T06:09:05.468288" elapsed="0.296691"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:04.651984" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='EHR']]'.</msg>
+<msg time="2024-11-28T06:09:05.765857" level="INFO">Clicking element '//div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='EHR']]'.</msg>
 <arg>${CLICK_EHR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.651702" elapsed="0.044732"/>
+<status status="PASS" start="2024-11-28T06:09:05.765324" elapsed="0.109651"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${VALIDASI_EHR}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.696644" elapsed="0.272712"/>
+<status status="PASS" start="2024-11-28T06:09:05.875254" elapsed="0.306719"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${VALIDASI_EHR}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.969877" elapsed="0.018023"/>
+<status status="PASS" start="2024-11-28T06:09:06.182297" elapsed="0.027280"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:04.998080" level="INFO">Element '//div[contains(@class, 'px-4 py-4 flex flex-col items-center') and .//h1[text()='EHR']]' is displayed.</msg>
+<msg time="2024-11-28T06:09:06.233344" level="INFO">Element '//h1[contains(text(), 'Electronic Health Record')]' is displayed.</msg>
 <arg>${VALIDASI_EHR}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.988137" elapsed="0.010027"/>
+<status status="PASS" start="2024-11-28T06:09:06.209895" elapsed="0.023640"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:05.467776" elapsed="0.765995"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-28T03:03:04.998369" elapsed="0.069833"/>
+<status status="PASS" start="2024-11-28T06:09:06.234178" elapsed="0.115098"/>
 </kw>
-<status status="PASS" start="2024-11-28T03:03:00.763595" elapsed="4.304959"/>
+<status status="PASS" start="2024-11-28T06:09:01.129049" elapsed="5.220653"/>
 </test>
-<test id="s1-t3" name="Open Mitra" line="92">
+<test id="s1-t3" name="Open Mitra" line="64">
+<kw name="Open Landing Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:05.072209" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<msg time="2024-11-28T06:09:06.355569" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-28T03:03:05.071162" elapsed="1.092236"/>
+<status status="PASS" start="2024-11-28T06:09:06.354851" elapsed="1.503755"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-28T03:03:06.163736" elapsed="0.088196"/>
+<status status="PASS" start="2024-11-28T06:09:07.859038" elapsed="0.017091"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:06.353431" elapsed="1.522919"/>
+</kw>
+<kw name="Open Landing Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-28T06:09:07.878589" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-28T06:09:07.877947" elapsed="1.552363"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-28T06:09:09.430609" elapsed="0.069001"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:07.876845" elapsed="1.622955"/>
+</kw>
+<kw name="Close Popup">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CLOSE_POPUP}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:06.252313" elapsed="0.138424"/>
+<status status="PASS" start="2024-11-28T06:09:09.500476" elapsed="0.099484"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:06.391880" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:09.600667" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
 <arg>${CLOSE_POPUP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:06.391224" elapsed="0.124802"/>
+<status status="PASS" start="2024-11-28T06:09:09.600241" elapsed="0.228553"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:09.500097" elapsed="0.328952"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:06.516739" level="INFO">Clicking element '//a[text()='Mitra']'.</msg>
+<msg time="2024-11-28T06:09:09.830164" level="INFO">Clicking element '//a[text()='Mitra']'.</msg>
 <arg>${MITRA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:06.516367" elapsed="0.099668"/>
+<status status="PASS" start="2024-11-28T06:09:09.829719" elapsed="0.143877"/>
 </kw>
+<kw name="Daftar Kemitraan">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${BUTTON_MITRA}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:06.616385" elapsed="0.293374"/>
+<status status="PASS" start="2024-11-28T06:09:09.974511" elapsed="0.300261"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:06.910679" level="INFO">Clicking element '//button[text()='Mendaftar Kemitraan']'.</msg>
+<msg time="2024-11-28T06:09:10.275690" level="INFO">Clicking element '//button[text()='Mendaftar Kemitraan']'.</msg>
 <arg>${BUTTON_MITRA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:06.910202" elapsed="0.239902"/>
+<status status="PASS" start="2024-11-28T06:09:10.275085" elapsed="0.102734"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:07.150744" level="INFO">Clicking element '//div[@id='portal']/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:10.378763" level="INFO">Clicking element '//div[@id='portal']/div/div/div'.</msg>
 <arg>${CLOSE_MITRA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:07.150405" elapsed="0.114946"/>
+<status status="PASS" start="2024-11-28T06:09:10.378202" elapsed="0.221528"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-28T03:03:12.266271" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-11-28T06:09:15.600460" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-28T03:03:07.265655" elapsed="5.000831"/>
+<status status="PASS" start="2024-11-28T06:09:10.600012" elapsed="5.000665"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:09.974047" elapsed="5.626825"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-28T03:03:12.267332" elapsed="0.074056"/>
+<status status="PASS" start="2024-11-28T06:09:15.601210" elapsed="0.111063"/>
 </kw>
-<status status="PASS" start="2024-11-28T03:03:05.069444" elapsed="7.272386"/>
+<status status="PASS" start="2024-11-28T06:09:06.350261" elapsed="9.362633"/>
 </test>
-<test id="s1-t4" name="Open Blog" line="104">
+<test id="s1-t4" name="Open Blog" line="74">
+<kw name="Open Landing Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:12.344452" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<msg time="2024-11-28T06:09:15.716245" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-28T03:03:12.343847" elapsed="1.081384"/>
+<status status="PASS" start="2024-11-28T06:09:15.715663" elapsed="2.087692"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-28T03:03:13.425765" elapsed="0.045402"/>
+<status status="PASS" start="2024-11-28T06:09:17.803752" elapsed="0.019142"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:15.714800" elapsed="2.108347"/>
+</kw>
+<kw name="Open Landing Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-28T06:09:17.825034" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-28T06:09:17.824500" elapsed="7.633004"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-28T06:09:25.457933" elapsed="0.079591"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:17.823676" elapsed="7.714249"/>
+</kw>
+<kw name="Close Popup">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CLOSE_POPUP}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:13.473103" elapsed="0.187683"/>
+<status status="PASS" start="2024-11-28T06:09:25.546814" elapsed="0.216878"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:13.661980" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:25.764512" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
 <arg>${CLOSE_POPUP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:13.661338" elapsed="0.126277"/>
+<status status="PASS" start="2024-11-28T06:09:25.764043" elapsed="0.188759"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:25.545950" elapsed="0.407034"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:13.788164" level="INFO">Clicking element '//a[text()='Blog']'.</msg>
+<msg time="2024-11-28T06:09:25.953799" level="INFO">Clicking element '//a[text()='Blog']'.</msg>
 <arg>${BLOG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:13.787872" elapsed="0.095248"/>
+<status status="PASS" start="2024-11-28T06:09:25.953290" elapsed="0.100326"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-28T03:03:13.883455" elapsed="0.070208"/>
+<status status="PASS" start="2024-11-28T06:09:26.053985" elapsed="0.092993"/>
 </kw>
-<status status="PASS" start="2024-11-28T03:03:12.343068" elapsed="1.610869"/>
+<status status="PASS" start="2024-11-28T06:09:15.713824" elapsed="10.433620"/>
 </test>
-<test id="s1-t5" name="Open Promo" line="113">
+<test id="s1-t5" name="Open Promo" line="83">
+<kw name="Open Landing Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:13.955046" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<msg time="2024-11-28T06:09:26.171668" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-28T03:03:13.954541" elapsed="1.154788"/>
+<status status="PASS" start="2024-11-28T06:09:26.170649" elapsed="4.773777"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-28T03:03:15.109668" elapsed="0.040309"/>
+<status status="PASS" start="2024-11-28T06:09:30.944885" elapsed="0.031251"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:26.163948" elapsed="4.812470"/>
+</kw>
+<kw name="Open Landing Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-28T06:09:30.978820" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-28T06:09:30.978206" elapsed="1.991098"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-28T06:09:32.969713" elapsed="0.105215"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:30.976978" elapsed="2.098183"/>
+</kw>
+<kw name="Close Popup">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CLOSE_POPUP}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:15.150589" elapsed="0.174561"/>
+<status status="PASS" start="2024-11-28T06:09:33.078214" elapsed="0.120559"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:15.325917" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:33.199584" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
 <arg>${CLOSE_POPUP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:15.325532" elapsed="0.133352"/>
+<status status="PASS" start="2024-11-28T06:09:33.199125" elapsed="0.135137"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:33.077658" elapsed="0.256868"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:15.459489" level="INFO">Clicking element '//a[text()='Promo']'.</msg>
+<msg time="2024-11-28T06:09:33.335288" level="INFO">Clicking element '//a[text()='Promo']'.</msg>
 <arg>${PROMO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:15.459166" elapsed="0.090243"/>
+<status status="PASS" start="2024-11-28T06:09:33.334911" elapsed="0.166368"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-28T03:03:15.549725" elapsed="0.074035"/>
+<status status="PASS" start="2024-11-28T06:09:33.501964" elapsed="0.075482"/>
 </kw>
-<status status="PASS" start="2024-11-28T03:03:13.954224" elapsed="1.669881"/>
+<status status="PASS" start="2024-11-28T06:09:26.163150" elapsed="7.414689"/>
 </test>
-<test id="s1-t6" name="Open Tentang Kami" line="122">
+<test id="s1-t6" name="Open Tentang Kami" line="92">
+<kw name="Open Landing Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:15.625925" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<msg time="2024-11-28T06:09:33.581097" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-28T03:03:15.625264" elapsed="1.069782"/>
+<status status="PASS" start="2024-11-28T06:09:33.580333" elapsed="1.293633"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-28T03:03:16.695377" elapsed="0.078442"/>
+<status status="PASS" start="2024-11-28T06:09:34.874236" elapsed="0.117271"/>
 </kw>
+<status status="PASS" start="2024-11-28T06:09:33.579609" elapsed="1.412162"/>
+</kw>
+<kw name="Close Popup">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CLOSE_POPUP}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-28T03:03:16.774295" elapsed="0.175726"/>
+<status status="PASS" start="2024-11-28T06:09:34.992800" elapsed="0.113027"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:16.950577" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:35.106661" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
 <arg>${CLOSE_POPUP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:16.950292" elapsed="0.083069"/>
+<status status="PASS" start="2024-11-28T06:09:35.106158" elapsed="0.126153"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:34.992160" elapsed="0.240385"/>
+</kw>
+<kw name="Open Landing Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-28T06:09:35.233858" level="INFO">Opening browser 'chrome' to base url 'https://mediverse.id/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-28T06:09:35.233485" elapsed="1.591252"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-28T06:09:36.825059" elapsed="0.085993"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:35.232953" elapsed="1.678308"/>
+</kw>
+<kw name="Close Popup">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLOSE_POPUP}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-28T06:09:36.912311" elapsed="0.233794"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:17.034131" level="INFO">Clicking element '//a[text()='Tentang Kami']'.</msg>
+<msg time="2024-11-28T06:09:37.146782" level="INFO">Clicking element '//div[@id="portal"]/div/div/div'.</msg>
+<arg>${CLOSE_POPUP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-28T06:09:37.146372" elapsed="0.157779"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:36.911837" elapsed="0.392469"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-28T06:09:37.305105" level="INFO">Clicking element '//a[text()='Tentang Kami']'.</msg>
 <arg>${ABOUT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:17.033597" elapsed="0.083284"/>
+<status status="PASS" start="2024-11-28T06:09:37.304647" elapsed="0.133298"/>
 </kw>
+<kw name="Kontak Kami">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${BUTTON_KONTAK_KAMI}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-28T03:03:17.117389" elapsed="0.291564"/>
+<status status="PASS" start="2024-11-28T06:09:37.439000" elapsed="0.375476"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:17.409435" level="INFO">Clicking element '//button[h3[text()='Kontak Kami']]'.</msg>
+<msg time="2024-11-28T06:09:37.815200" level="INFO">Clicking element '//button[h3[text()='Kontak Kami']]'.</msg>
 <arg>${BUTTON_KONTAK_KAMI}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:17.409193" elapsed="0.048497"/>
+<status status="PASS" start="2024-11-28T06:09:37.814799" elapsed="0.114967"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T03:03:17.458203" level="INFO">Clicking element '//div[@id='portal']/div/div/div'.</msg>
+<msg time="2024-11-28T06:09:37.930296" level="INFO">Clicking element '//div[@id='portal']/div/div/div'.</msg>
 <arg>${CLOSE_MITRA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T03:03:17.457938" elapsed="0.060932"/>
+<status status="PASS" start="2024-11-28T06:09:37.930005" elapsed="0.124070"/>
+</kw>
+<status status="PASS" start="2024-11-28T06:09:37.438390" elapsed="0.615923"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-28T03:03:17.519161" elapsed="0.086980"/>
+<status status="PASS" start="2024-11-28T06:09:38.054707" elapsed="0.067350"/>
 </kw>
-<status status="PASS" start="2024-11-28T03:03:15.624583" elapsed="1.981872"/>
+<status status="PASS" start="2024-11-28T06:09:33.578624" elapsed="4.543669"/>
 </test>
-<status status="PASS" start="2024-11-28T03:02:58.577805" elapsed="19.029272"/>
+<status status="PASS" start="2024-11-28T06:08:57.290596" elapsed="40.832319"/>
 </suite>
 <statistics>
 <total>
