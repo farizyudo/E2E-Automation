@@ -35,7 +35,7 @@ ${PROMO}                       //a[text()='Promo']
 
 # Tentang Kami
 ${ABOUT}                       //a[text()='Tentang Kami']
-${BUTTON_KONTAK_KAMI}          //button[text()='Kontak Kami']
+${BUTTON_KONTAK_KAMI}          //button[h3[text()='Kontak Kami']]
 
 *** Test Cases ***
 Open Mediverse
@@ -125,7 +125,7 @@ Open Tentang Kami
     Wait Until Element Is Visible        ${CLOSE_POPUP}       5s
     Click Element                        ${CLOSE_POPUP} 
     Click Element                        ${ABOUT}
-    Wait Until Element Is Visible        ${BUTTON_KONTAK_KAMI}
+    Scroll Element Into View             ${BUTTON_KONTAK_KAMI}
     Click Element                        ${BUTTON_KONTAK_KAMI}
     Click Element                        ${CLOSE_MITRA} 
 
