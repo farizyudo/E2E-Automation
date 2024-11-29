@@ -7,6 +7,10 @@ ${URL}                        https://mediverse.id/
 ${BROWSER}                    chrome
 ${CLOSE_POPUP}                //div[@id="portal"]/div/div/div
 ${CLOSE_MITRA}                //div[@id='portal']/div/div/div
+${Input_Nama_Mitra}           //input[@id='partner']
+${Input_Nama_Pemilik}         //input[@id='owner']
+${Input_Nama_Email}           //input[@id='contact']
+${BTN_Gabung_Mintra}          //div[@id="portal"]/div/div/div[2]/div/div[5]/div/div[2]/div/button
 
 # Home
 ${BUTTON_DOWNLOAD}            //button[.//span[text()='Download App']]
@@ -14,10 +18,10 @@ ${BUTTON_GABUNG_MITRA}        //button[text()='Gabung Mitra']
 
 # Produk
 ${PRODUK}                     //a[text()='Produk']
-${CLICK_Madevo}               //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medevo']]
-${CLICK_Medpharm}             //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpharm']]
-${CLICK_Medpoint}             //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='Medpoint']]
-${CLICK_EHR}                  //div[contains(@class, 'w-[158px] xl:w-[339px]') and .//h1[text()='EHR']]
+${CLICK_Madevo}               //h1[text()='Medevo']
+${CLICK_Medpharm}             //h1[text()='Medpharm']
+${CLICK_Medpoint}             //h1[text()='Medpoint']
+${CLICK_EHR}                  //h1[text()='EHR']
 ${VALIDASI_Madevo}            //h1[contains(text(), 'Konsultasi Dokter Online')]
 ${VALIDASI_Medpharm}          //h1[contains(text(), 'Beli Obat di')]
 ${VALIDASI_Medpoint}          //h1[contains(text(), 'Buat Janji Konsultasi di')]
@@ -38,16 +42,22 @@ ${ABOUT}                       //a[text()='Tentang Kami']
 ${BUTTON_KONTAK_KAMI}          //button[h3[text()='Kontak Kami']]
 
 *** Test Cases ***
-Open Mediverse
+Open Home
+    Open Landing Page            
+    Close Popup               
+        
+    Test Valid Email Input
+
+    Close Browser                                                                  
+
+Open Home Download
     Open Landing Page            
     Close Popup               
     
-    Gaabung Mitra     
     Button Download
-                        
-    
+
     Close Browser                                                                  
-    
+
 Open Product
     Open Landing Page                                                      
     Close Popup
@@ -62,7 +72,6 @@ Open Product
     Close Browser
 
 Open Mitra
-    Open Landing Page
     Open Landing Page                                                      
     Close Popup
 
@@ -81,7 +90,6 @@ Open Blog
     Close Browser
 
 Open Promo
-    Open Landing Page
     Open Landing Page                                                      
     Close Popup
 
@@ -92,8 +100,7 @@ Open Promo
 Open Tentang Kami
     Open Landing Page           
     Close Popup
-    Open Landing Page                                                      
-    Close Popup
+
 
     Click Element                        ${ABOUT}
     Kontak Kami
@@ -110,13 +117,37 @@ Close Popup
     Wait Until Element Is Visible        ${CLOSE_POPUP}                  5s
     Click Element                        ${CLOSE_POPUP}
 
-Gaabung Mitra
-    Wait Until Element Is Visible        ${BUTTON_GABUNG_MITRA}
-    Click Element                        ${BUTTON_GABUNG_MITRA}
-    Click Element                        ${CLOSE_MITRA}   
+Test Valid Email Input
+    # [Documentation]    Menguji input valid dengan email
+    Wait Until Element Is Visible           ${BUTTON_GABUNG_MITRA}       5s
+    Click Element                           ${BUTTON_GABUNG_MITRA}
+
+    Input Text        ${Input_Nama_Mitra}       John Doe
+    Input Text        ${Input_Nama_Pemilik}     Jane Doe
+    Input Text        ${Input_Nama_Email}       example011@gmail.com
+    Click Element     ${BTN_Gabung_Mintra}
+    Click Element     ${CLOSE_MITRA}
+
+
+Test Valid Nomor Input
+    # [Documentation]    Menguji input valid dengan email
+    Wait Until Element Is Visible           ${BUTTON_GABUNG_MITRA}        5s
+    Click Element                           ${BUTTON_GABUNG_MITRA}
+
+    Input Text        ${Input_Nama_Mitra}       John Doe
+    Input Text        ${Input_Nama_Pemilik}     Jane Doe
+    Input Text        ${Input_Nama_Email}       080000000010
+    Click Element     ${BTN_Gabung_Mintra}
+    Click Element     ${CLOSE_MITRA}
+
+# Gaabung Mitra
+#     Wait Until Element Is Visible        ${BUTTON_GABUNG_MITRA}
+#     Click Element                        ${BUTTON_GABUNG_MITRA}
+#     Click Element                        ${CLOSE_MITRA}   
 
 Button Download
-    Wait Until Element Is Visible        ${BUTTON_DOWNLOAD}             5s             
+    Wait Until Element Is Visible        ${BUTTON_DOWNLOAD}             5s     
+    # Scroll Element Into View             ${BUTTON_DOWNLOAD}        
     Click Element                        ${BUTTON_DOWNLOAD}    
 
 Validasi Madevo
