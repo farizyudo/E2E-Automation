@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest  # Kamu bisa mengganti dengan OS lain sesuai kebutuhan
 
     steps:
-      # Step 1: Checkout repository
+      # Step 1:  Checkout kode repositori
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -29,12 +29,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Run Robot Framework tests
+      # Step 4: Install WebDriver Manager
+      - name: Install WebDriver Manager
+        run: |
+          pip install webdriver-manager
+
+      # Step : Run Robot Framework tests
       - name: Run Robot Framework tests
         run: |
           robot tests/01_LandingPage.robot
 
-      # Step 5: Upload test results as artifacts
+      # Step : Upload test results as artifacts
       - name: Upload Robot Framework reports
         uses: actions/upload-artifact@v3
         with:
