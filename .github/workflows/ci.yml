@@ -1,0 +1,39 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches:
+      - main  # Kamu bisa menambahkan branch lain sesuai kebutuhan
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Kamu bisa mengganti dengan OS lain sesuai kebutuhan
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Checkout kode dari repositori
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'  # Tentukan versi Python yang digunakan
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Pastikan ada file requirements.txt dengan dependensi yang diperlukan
+
+      - name: Set up Selenium WebDriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-chromedriver  # Menginstall WebDriver untuk Selenium (Chromium)
+          sudo apt-get install -y xvfb  # Menginstall Xvfb untuk menjalankan browser tanpa display
+
+      - name: Run Robot Framework Tests
+        run: |
+          export DISPLAY=:99.0  # Mengatur display untuk menjalankan browser dalam mode headless
+          Xvfb :99 -screen 0 1280x1024x24 &  # Menjalankan Xvfb di background
+          robot tests/  # Ganti dengan direktori atau path tempat test Robot Framework kamu berada
