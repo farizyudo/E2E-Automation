@@ -1,4 +1,4 @@
-name: Landing Page
+name: Landing Page Automation
 
 on:
   push:
@@ -13,27 +13,60 @@ jobs:
     runs-on: ubuntu-24.04  # Kamu bisa mengganti dengan OS lain sesuai kebutuhan
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3  # Checkout kode dari repositori
+      # - name: Checkout repository
+      #   uses: actions/checkout@v3  # Checkout kode dari repositori
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.9'  # Tentukan versi Python yang digunakan
+      # - name: Set up Python
+      #   uses: actions/setup-python@v3
+      #   with:
+      #     python-version: '3.9'  # Tentukan versi Python yang digunakan
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Pastikan ada file requirements.txt dengan dependensi yang diperlukan
+      # - name: Install dependencies
+      #   run: |
+      #     python -m pip install --upgrade pip
+      #     pip install -r requirements.txt  # Pastikan ada file requirements.txt dengan dependensi yang diperlukan
 
-      - name: Set up Selenium WebDriver
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-chromedriver  # Menginstall WebDriver untuk Selenium (Chromium)
-          sudo apt-get install -y xvfb  # Menginstall Xvfb untuk menjalankan browser tanpa display
+      # - name: Set up Selenium WebDriver
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y chromium-chromedriver  # Menginstall WebDriver untuk Selenium (Chromium)
+      #     sudo apt-get install -y xvfb  # Menginstall Xvfb untuk menjalankan browser tanpa display
 
-      - name: Run Robot Framework Tests
-        run: |
-          export DISPLAY=:99.0  # Mengatur display untuk menjalankan browser dalam mode headless
-          Xvfb :99 -screen 0 1280x1024x24 &  # Menjalankan Xvfb di background
-          robot tests/  # Ganti dengan direktori atau path tempat test Robot Framework kamu berada
+      # - name: Run Robot Framework Tests
+      #   run: |
+      #     export DISPLAY=:99.0  # Mengatur display untuk menjalankan browser dalam mode headless
+      #     Xvfb :99 -screen 0 1280x1024x24 &  # Menjalankan Xvfb di background
+      #     robot tests/  # Ganti dengan direktori atau path tempat test Robot Framework kamu berada
+
+        # Step 1: Checkout kode dari repositori
+        - name: Checkout repository
+          uses: actions/checkout@v3
+    
+        # Step 2: Setup Python
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.x'
+    
+        # Step 3: Install dependencies
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+    
+        # Step 4: Install WebDriver Manager
+        - name: Install WebDriver Manager
+          run: |
+            pip install webdriver-manager
+    
+        # Step 5: Jalankan Pengujian dengan Robot Framework
+        - name: Run Robot Framework Tests
+          run: |
+            robot -d results E2E-MEDIVERSE/tests/01_LandingPage.robot
+    
+        # Step 6: Upload hasil pengujian sebagai artefak
+        - name: Upload Test Results
+          uses: actions/upload-artifact@v3
+          with:
+            name: robot-results
+            path: report/
