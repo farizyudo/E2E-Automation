@@ -1,4 +1,4 @@
-name: Robot Framework Tests
+name: Landing Page
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Kamu bisa mengganti dengan OS lain sesuai kebutuhan
+    runs-on: ubuntu-24.04  # Kamu bisa mengganti dengan OS lain sesuai kebutuhan
 
     steps:
       - name: Checkout repository
